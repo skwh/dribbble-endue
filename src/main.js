@@ -5,6 +5,12 @@ import camelCase from 'lodash/camelCase'
 
 Vue.config.productionTip = false
 
+module.exports = {
+  build: {
+    assetsPublicPath: '/'
+  }
+}
+
 const requireComponent = require.context(
   // The relative path of the components folder
   './components/base',
