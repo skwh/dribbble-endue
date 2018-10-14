@@ -56,7 +56,7 @@ article {
   }
 
   h2 {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 1.75rem;
     text-transform: uppercase;
     margin: 0;
