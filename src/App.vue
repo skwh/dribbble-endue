@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <endue-header></endue-header>
+  <endue-main></endue-main>
+  <div id="articles">
+
   </div>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EndueHeader from './components/Header'
+import EndueMain from './components/Main'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+  components: { EndueHeader, EndueMain }
 }
 </script>
 
 <style lang="scss">
+$main-black: #0B1227;
+$main-red: #FD455f;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
 }
 </style>
