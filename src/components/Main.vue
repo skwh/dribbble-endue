@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <section>
     <div class="words large">
       <h1>Ideas
         <span class="out">
@@ -22,11 +22,11 @@
       <large-button backgroundColor="#3D96FF">
         <logo-icon topColor="white" bottomColor="black"></logo-icon>
       </large-button>
-      <large-button backgroundColor="rgba(0,0,0,0)" borderColor="rgba(255,255,255,0.5)">
+      <large-button class="partial-border" backgroundColor="rgba(0,0,0,0)" borderColor="rgba(255,255,255,0.5)">
         <material-icon name="play_arrow" size="32px"></material-icon>
       </large-button>
     </div>
-  </main>
+  </section>
 </template>
 
 <script>
@@ -36,9 +36,8 @@ export default {
 </script>
 
 <style lang="scss">
-main {
+section {
   position: relative;
-  margin-left: 280px;
   margin-top: 160px;
 }
 
@@ -84,7 +83,7 @@ main {
 
 blockquote {
   margin: 0;
-  width: 43%;
+  width: 50%;
   line-height: 1.5rem;
   font-weight: normal;
 
@@ -103,6 +102,12 @@ div.buttons {
 
   div.button-container {
     margin: 1vw;
+
+    &.partial-border>button {
+      border-top: 2px solid white !important;
+      border-right: 2px solid white !important;
+      border-bottom: 2px solid white !important;
+    }
   }
 }
 

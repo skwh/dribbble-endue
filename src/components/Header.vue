@@ -9,7 +9,7 @@
     <nav>
       <a v-for="(pageName, index) in pages"
            :key="`link-${index}`"
-           class="navigation-item"
+           :class="`navigation-item ${(index==0)?'selected':''}`"
            href="#">
         <material-icon v-if="index==0" name="arrow_drop_down"></material-icon>
         {{ pageName }}
@@ -43,12 +43,6 @@ export default {
 </script>
 
 <style lang="scss">
-.bar {
-  height: 3px;
-  position: absolute;
-  top: 85%;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -59,6 +53,11 @@ header {
   display: flex;
   flex-direction: row;
   width: 100vw;
+  span.bar {
+    height: 3px;
+    position: absolute;
+    top: 85%;
+  }
 }
 
 #logo {
@@ -95,15 +94,23 @@ nav {
   flex: 1 0 auto;
 
   .navigation-item {
-    padding: 2vw;
-    padding-bottom: 3vw;
+    margin: 2vw;
+    margin-bottom: 0;
+    padding-bottom: 3.2vw;
     font-size: 0.95rem;
     display: inline-block;
+    z-index: 1;
+
+    &.selected {
+      border-bottom: 5px solid white;
+    }
   }
 
   .bar {
     background-color: #2D4C79;
-    width: 100%;
+    width: 96%;
+    left: 2%;
+    z-index: 0;
   }
 
   .search {
